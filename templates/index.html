@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>Fibonacci Calculator</title>
 </head>
 <body>
     <h1>Fibonacci Calculator</h1>
-    <form action="/calculate" method="POST">
-        <input type="number" name="number" required>
+    <form method="POST">
+        <label>Enter a number:</label>
+        <input type="text" name="number" required>
         <button type="submit">Calculate</button>
     </form>
 
-    {% if fibonacci is not none %}
-    <h2>Fibonacci Result: {{ fibonacci }}</h2>
+    {% if result %}
+        <h2>Result:</h2>
+        <p>{{ result }}</p>
     {% endif %}
 </body>
 </html>
